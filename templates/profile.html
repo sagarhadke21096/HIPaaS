@@ -1,0 +1,63 @@
+{% extends "layoutInner.html" %}
+{% block content %}
+<div class="container" style="padding-top:50px">
+    <h3>User details:</h3>
+
+    <table class="table table-striped" >
+
+      <tr>
+          <th>Name: </th>
+          <td>{{ session['name'] }}</td>
+      </tr>
+      <tr>
+          <th>Gender: </th>
+          <td>{{ session['gender'] }}</td>
+      </tr>
+      <tr>
+          <th>Age: </th>
+          <td>{{ session['age'] }}</td>
+      </tr>
+     <tr>
+          <th>Qualification: </th>
+          <td>{{ session['qual'] }}</td>
+      </tr>
+      <tr>
+          <th>Previous knowledge: </th>
+          <td>{{ session['pre_knowledge'] }}</td>
+      </tr>
+      <tr>
+          <th>Area of interest: </th>
+          <td>{{ session['area_interest'] }}</td>
+      </tr>
+     <tr>
+          <th>Email: </th>
+          <td>{{ session['email'] }}</td>
+      </tr>
+
+    </table>
+    <form class="form-group" method="POST" style="float:right">
+        <button class="btn btn-success" type="submit" name="edit1" value="edit">Edit</button>
+    </form>
+
+    <h3 style="padding-top:50px">Course details:</h3>
+
+    <table class="table">
+        <thead>
+        <th>Courses enrolled</th>
+        <th>Status</th>
+        <th>Rating</th>
+        </thead>
+        {% for t in range(0,l,3) %}
+        <tr>
+            <td>{{ b[t] }}</td>
+            <td>{{ b[t+1] }}</td>
+            <td>{{ b[t+2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+
+</div>
+{%  endblock content %}

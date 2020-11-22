@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>HIPaaS - {{ title }}</title>
+    {% else %}
+    <title>HIPaaS</title>
+    {% endif %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .fp{
+          font-size: 40px;
+          font-family: times new roman;
+         }
+         .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background-image: url("static/img/cse.png");
+            min-height: 70%;
+         }
+         .btn{
+            background-color:;
+            text-align: center;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            color:white;
+         }
+        .btn:hover{
+            background-blend-mode: soft-light;
+        }
+        body, html {
+        height: 100%;
+        /* line-height: 1.8;*/
+        background: url("static/img/bg11.png");
+        background-size: cover;
+        background-color:#BEDFF0;
+        font-family:times new roman
+        }
+        .button{
+          background-color: rgba(245, 245, 245, 0.05);
+          text-align: center;
+          font-size: ;
+          padding: ;
+          width:;
+        }
+        .button:hover {
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+          background-color: #F0F0F0;
+          color: black;
+        }
+
+      .form{
+ 	    padding-top: 100Px;
+ 	    padding-left: 30%;
+
+       a.navbar-brand {
+        padding-right: 50px;
+      }
+
+      .foot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="" style="font-family: comic sans">HIPaaS</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="trainer">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">Link</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"-->
+<!--                   aria-expanded="false">Dropdown</a>-->
+<!--                <div class="dropdown-menu" aria-labelledby="dropdownId">-->
+<!--                    <a class="dropdown-item" href="#">Action 1</a>-->
+<!--                    <a class="dropdown-item" href="#">Action 2</a>-->
+<!--                </div>-->
+<!--            </li>-->
+
+        </ul>
+<!--        <form class="form-inline my-2 my-lg-0">-->
+<!--            <input class="form-control mr-sm-2" type="text" placeholder="Search">-->
+<!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--        </form>-->
+            <div class="nav-item" style="padding-right:30px">
+<!--                <span class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="false"-->
+<!--                   aria-expanded="false">Dropdown</a>-->
+<!--                <div class="dropdown-menu" aria-labelledby="dropdownId">-->
+<!--                    <a class="dropdown-item" href="#">Account setting</a>-->
+<!--                    <a class="dropdown-item" href="#">Log out</a>-->
+<!--                </div>-->
+<!--                </span>-->
+
+                <span class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<!--              <img src="{{url_for('static', filename='img/user-160x160.jpg')}}" class="user-image" alt="User Image" style="float: left;-->
+<!--            width: 50px; height: 40px; border-radius: 50%; margin-right: 10px; margin-top: -2px;">-->
+              <span class="hidden-xs">{{ session['name'].title() }}</span>
+            </a>
+            <ul class="dropdown-menu" style="position: absolute; right: 5%; left: auto; border: 1px solid #ddd; background: #fff;">
+              <!-- User image -->
+<!--              <li class="user-header" style="height: 175px; padding: 10px; text-align: center;">-->
+<!--                <img src="{{url_for('static', filename='img/user-160x160.jpg')}}" class="img-circle" alt="User Image" style="border-radius: 50%;">-->
+
+<!--              </li>-->
+              <!-- Menu Body -->
+                <li class="user-header" style="height:; padding: 10px; text-align: center; color:red">
+                   Trainer ID: &nbsp{{ session['t_id'] }}
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer" style="background-color: #f9f9f9; padding: 10px;">
+<!--                <div class="pull-left">-->
+<!--                  <a href="profile" class="btn btn-default btn-flat" style="color:black">Profile</a>-->
+<!--                </div>-->
+                <div class="pull-left">
+                  <a href="logout" class="btn btn-default btn-flat" style="color:black">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </span>
+
+            </div>
+
+    </div>
+</nav>
+<div class="container-fluid" style="height:100%">
+
+{% block content %}{% endblock %}
+
+</div>
+<script>
+	$('#navId a').click(e => {
+		e.preventDefault();
+		$(this).tab('show');
+	});
+
+</script>
+
+</body>
+</html>
+
+
+
+

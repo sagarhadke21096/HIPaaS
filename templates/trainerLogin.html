@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="" method="POST">
+    <div class="container" style="padding-top: 50px">
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center">HIPaaS tutor login</h4>
+                <p class="card-text"></p>
+                <!--      <a href="#" class="card-link">Card link</a>-->
+                <!--      <a href="#" class="card-link">Another link</a>-->
+                <form action="dashboard" method="POST">
+                    ̥{% if error %}
+                      <p class="error" style="color:red"><strong>Error:</strong> {{ error }}
+                    {% endif %}
+                    <div class="form-group">
+                        <label for="email"></label>Enter Email:
+                        <input aria-describedby="emailHelpId" class="form-control" id="email" name="email" placeholder="" type="email" value="{{ request.form.email }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="password"></label>Enter password:
+                        <input class="form-control" id="password" name="password" placeholder="" type="password" value="{{request.form.password }}">
+                    </div>
+                    <button class="btn btn-primary" name="trainer" type="submit">Login</button>
+                </form>
+                Not a member? <a href="trainer_signup">Sign up</a>
+            </div>
+        </div>
+
+
+    </div>
+</form>
+{% endblock content %}

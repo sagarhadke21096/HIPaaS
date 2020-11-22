@@ -1,0 +1,232 @@
+{% extends "layoutInner.html" %}
+{% block content %}
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px times new roman;
+}
+
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+</style>
+
+
+
+<!--<form method="POST" action="">-->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="search-container">
+    	<form class="form" action="" method="POST">
+                  <div class="input-group" style="width: 50%">
+                   <input id="myInput" class="form-control" type="text" name="myCountry" placeholder="Search Courses">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit" class="form-control" name="search">
+                       <i class='fas fa-search'></i>
+                    </button>
+                </div>
+              </div>
+       </form> </div>
+  </header>
+
+    <script>
+
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all the country names in the world:*/
+var countries = ['Build Responsive Real World Websites with HTML5 and CSS3', 'Advanced CSS: Flexbox, Grid, Animations and More!', 'Web Design for Beginners: Real World Coding in HTML & CSS', 'The Complete JavaScript Course 2020: Build Real Projects!', 'JavaScript: Understanding the Weird Parts', 'Modern JavaScript From The Beginning', 'Complete Python Bootcamp: Go from zero to hero in Python 3', 'Machine Learning A-Z™: Hands-On Python & R In Data Science', 'Python for Data Science and Machine Learning Bootcamp', 'PHP for Beginners - Become a PHP Master ', 'PHP with Laravel for beginners - Become a Master in Laravel', 'PHP: Object Oriented Programming for beginners + Project', 'Machine Learning A-Z', 'Data Science and Deep Learning with Python', 'Spark and Python for Big Data with PySpark', 'Building Recommender Systems with Machine Learning and AI', 'Natural Language Processing with Deep Learning in Python', 'Master Computer Vision', 'SQL - MySQL for Data Analytics and Business Intelligence', 'R Programming A-Z™: R For Data Science With Real Exercises!', 'Statistics for Data Analysis Using R', 'Tableau 10 A-Z: Hands-On Tableau Training For Data Science!', 'Deep Learning and NLP A-Z™: How to create a ChatBot', 'The Python Mega Course: Build 10 Real World Applications', 'Automate the Boring Stuff with Python Programming', 'Beginning C++ Programming - From Beginner to Beyond', 'Learn Advanced C++ Programming', 'Java Programming Masterclass for Software Developers', 'Selenium WebDriver with Java -Basics to Advanced+Frameworks', 'The Complete Android & Java Developer Course - Build 21 Apps', 'The Complete Android N Developer Course', 'The Complete Android Oreo Developer Course - Build 23 Apps!', 'Android Java Masterclass - Become an App Developer', 'The Complete Android & Java Developer Course - Build 21 Apps', 'The Complete React Native + Hooks Course [2019 Edition]', 'React Native - The Practical Guide 2020', 'Using Python to Access Web Data', 'Applied Text Mining in Python', 'Mathematics for Machine Learning Specialization', 'Data Structures', 'Object Oriented Programming in Java Specialization', 'Neural Networks and Deep Learning', 'IBM Data Science Professional Certification', 'Applied Machine Learning in Python', 'Applied Data Science with Python Specialization', 'Python for Everybody Specialization', 'Applied Text Mining in Python', 'Clinical Natural Language Processing', 'Creating Dashboards and Storytelling with Tableau', 'Running a Mobile App Dev Business: The Complete Guide', 'Android App Development: Mobile App Development & Java', 'Android App Development Specialization', 'CSS - The Complete Guide 2020 (incl. Flexbox, Grid & Sass)', 'Modern HTML & CSS From The Beginning (Including Sass)', 'Build Websites from Scratch with HTML', 'The Modern JavaScript Bootcamp', "Javascript: The Complete Developer's Guide", 'JavaScript - The Complete Guide 2020 (Beginner + Advanced)', 'Learning Python for Data Analysis and Visualization', 'Learn Python Programming Masterclass', 'Learn PHP Programming From Scratch', 'Build a Social Network from Scratch: JavaScript PHP + MySQL', 'XML and XML Schema Definition in Easy Steps', 'The Complete React Developer Course', 'Build Websites from Scratch with CSS', 'Introduction to Javascript', 'Accelerated JavaScript Training', 'Step-by-step HTML for Absolute Beginners', 'Complete CSS3 Course: Beginning to Advanced', 'Create Websites with HTML & CSS for Beginners', 'The Complete SQL Bootcamp', 'Learn XML Crash Course: Discover Essential XML Fundamentals']
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+</script>
+
+<div class="container-fluid" style="padding-top:50px">
+<h3 class="" style="padding:10px">Popular courses</h3>
+    <div class="row" style="display:inline">
+<form method="POST">
+   <a href="courses" ><button name="myCountry" value="{{ data1[0] }}" class="col-3 card  button " style="float:left; color:black; padding:20px 20px 20px 20px; height:100px">
+        {{ data1[0] }}
+   </button></a>
+
+  <a href="courses" ><button name="myCountry" value="{{ data1[1] }}" class="col-3 card  button " style="float:left; color:black;padding:20px 20px 20px 20px; height:100px">
+        {{ data1[1] }}
+   </button></a>
+  <a href="courses" ><button name="myCountry" value="{{ data1[2] }}" class="card col-3  button " style="float:left; color:black;padding:20px 20px 20px 20px; height:100px">
+        {{ data1[2] }}
+   </button></a>
+ <a href="courses" ><button name="myCountry" value="{{ data1[3] }}" class="col-3 card  button " style="float:left; color:black;padding:20px 20px 20px 20px; height:100px">
+        {{ data1[3] }}
+ </button></a></form>
+</div>
+
+</div>
+
+<div class="container-fluid" style="padding-top:100px">
+<h3 class="" style="padding:10px">Recommended courses</h3>
+    <div class="row" style="display:inline">
+<form method="POST">
+   <a href="courses" ><button name="myCountry" value="{{ data[0] }}" class="col-3 card  button " style="float:left; color:black; padding:20px 20px 20px 20px; height:100px">
+        {{ data[0] }}
+   </button></a>
+
+  <a href="courses" ><button name="myCountry" value="{{ data[1] }}"class="col-3 card  button " style="float:left; color:black;padding:20px 20px 20px 20px; height:100px">
+        {{ data[1] }}
+   </button></a>
+  <a href="courses" ><button name="myCountry" value="{{ data[2] }}" class="card col-3  button " style="float:left; color:black;padding:20px 20px 20px 20px; height:100px">
+        {{ data[2] }}
+   </button></a>
+ <a href="courses" ><button name="myCountry" value="{{ data[3] }}" class="col-3 card  button " style="float:left; color:black;padding:20px 20px 20px 20px; height:100px">
+        {{ data[3] }}
+ </button></a></form>
+</div>
+
+</div>
+
+{% endblock content %}

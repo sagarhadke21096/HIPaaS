@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+{% block content %}
+
+   <!-- Header with full-height image -->
+                   <!--*****************************search-**************-->
+  <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+<!--    <div class="search-container">-->
+<!--    	<form class="form" action="" method="get">-->
+<!--                  <div class="input-group" style="width: 50%">-->
+<!--                 <input type="text" class="form-control" placeholder="Search topics..." name="keyword">-->
+<!--                <div class="input-group-btn">-->
+<!--                    <button class="btn btn-default" type="submit" class="form-control" name="search">-->
+<!--                       <i class='fas fa-search'></i>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--       </form> </div>-->
+    <div class="w3-display-left w3-text-white" style="padding:48px; font-family: ;">
+    <span class="w3-jumbo w3-hide-small">HIPaaS</span><br>
+<!--    <span class="w3-xxlarge w3-hide-large w3-hide-medium">HIPaaS</span><br>-->
+    <span class="w3-large" style="font-family: ariel; padding:30px;">Intelligent Recommendation system</span>
+   <p><a href="signup" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Join now</a><!--&nbsp<a href="#team" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Team</a>--></p>
+     </div>
+  </header>
+    <!--*****************caraousel*****************-->
+<!--    <div class="container-fluid mt-3" id="featured" style="padding-top: 100px; padding-bottom: 100px">-->
+<!--&lt;!&ndash;<h2 class="w3-center" style="padding: 50PX;">Featured courses</h2>&ndash;&gt;-->
+<!--<div id="myCarousel" class="carousel slide">-->
+
+<!--  &lt;!&ndash;&#45;&#45; Indicators &ndash;&gt;-->
+<!--  <ul class="carousel-indicators">-->
+<!--    <li class="item1 active"></li>-->
+<!--    <li class="item2"></li>-->
+<!--    <li class="item3"></li>-->
+<!--    <li class="item4"></li>-->
+<!--    <li class="item5"></li>-->
+<!--  </ul>-->
+
+<!--  &lt;!&ndash; The slideshow &ndash;&gt;-->
+<!--  <div class="row">-->
+<!--    <div class="col-4">-->
+<!--      <h2>description</h2>-->
+<!--    </div>-->
+<!--  <div class="carousel-inner col-8" style="background-color: ; float:left">-->
+<!--    <div class="carousel-item active row">-->
+<!--      <div class="col-4" style="float:left;">-->
+<!--        <img src="{{url_for('static', filename='img/py.jpg')}}" alt="Python programming" width="1100" height="500">-->
+<!--      </div>-->
+<!--      <div class="col-4" style="float:left;">-->
+<!--        <div class="col-6" style="float:left;">-->
+<!--          <img src="{{url_for('static', filename='img/android.jpg')}}" alt="Android development" width="1100" height="500">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="carousel-item row">-->
+<!--      <div class="col-4" style="float:left;">-->
+<!--        <img src="{{url_for('static', filename='img/ml.jpg')}}" alt="Machine Learning" width="1100" height="500">-->
+<!--      </div>-->
+<!--      <div class="col-4" style="float:left;">-->
+<!--        <div class="col-6" style="float:left;">-->
+<!--          <img src="{{url_for('static', filename='img/ds.jpg')}}" alt="Data Science" width="1100" height="500">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="carousel-item row">-->
+<!--      <div class="col-4" style="float:left;">-->
+<!--        <img src="{{url_for('static', filename='img/web.jpg')}}" alt="Web development" width="1100" height="500">-->
+<!--      </div>-->
+<!--      <div class="col-4" style="float:left;">-->
+<!--        <div class="col-6" style="float:left;">-->
+<!--          <div class="w3-jumbo w3-hide-small col-6 fp" style="float: left;">Design enticing Web pages and sites.</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--  &lt;!&ndash; Left and right controls &ndash;&gt;-->
+<!--  <a class="carousel-control-prev" href="#myCarousel">-->
+<!--    <span class="carousel-control-prev-icon"></span>-->
+<!--  </a>-->
+<!--  <a class="carousel-control-next" href="#myCarousel">-->
+<!--    <span class="carousel-control-next-icon"></span>-->
+<!--  </a>-->
+<!--</div>-->
+<!--</div>-->
+<!--    *******************************-->
+<br><br>
+<h2 style="padding:30px; ">Top courses</h2>
+<div class="container-fluid mt-3" style="padding:20px;">
+  <div class="row">
+    <div class="col-4" style="float:left">
+     <h2>description</h2>
+    </div>
+    <div class="carousel-inner col-8" style="float:left">
+      <div class="row">
+          <div class="col-4" style="float:left"><img src="{{url_for('static', filename='img/py.jpg')}}" alt="Python programming" width="100%" height="100%"></div>
+        <div class="col-4" style="float:left"><img src="{{url_for('static', filename='img/web.jpg')}}" alt="Web development" width="100%" height="100%"></div>
+        <div class="col-4" style="float:left"><img src="{{url_for('static', filename='img/ds.jpg')}}" alt="Data Science" width="100%" height="100%"></div>
+      </div>
+      <div class="row" style="padding-top:10px">
+        <div class="col-6" style="float:left"><img src="{{url_for('static', filename='img/ml.jpg')}}" alt="Machine Learning" width="100%" height="100%"></div>
+        <div class="col-6" style="float:left"><img src="{{url_for('static', filename='img/android.jpg')}}" alt="Android development" width="100%" height="100%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock content %}

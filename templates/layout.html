@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>HIPaaS - {{ title }}</title>
+    {% else %}
+    <title>HIPaaS</title>
+    {% endif %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<style type="text/css">
+         .fp{
+          font-size: 40px;
+          font-family: times new roman;
+         }
+         .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background-image: url("static/img/bgg.jfif");
+            min-height: 70%;
+         }
+         .btn{
+            background-color:;
+            text-align: center;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            color:white;
+         }
+        .btn:hover{
+            background-blend-mode: soft-light;
+        }
+        body, html {
+        height: 100%;
+        /* line-height: 1.8;*/
+        background: url("static/img/bg11.png");
+        background-size: cover;
+        background-color:#BEDFF0;
+        font-family:comic sans
+        }
+        .button{
+          background-color: white;
+          text-align: center;
+          font-size: 30px;
+          padding: 50px 50px 50px 50px;
+          width: 50%;
+        }
+        .button:hover {
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+          background-color: #F0F0F0;
+          color: black;
+        }
+
+      .form{
+ 	    padding-top: 100Px;
+ 	    padding-left: 30%;
+
+       a.navbar-brand {
+        padding-right: 50px;
+      }
+
+      .foot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+</style>
+
+</head>
+<!--    <script src="{{ url_for('static', filename='myscript.js') }}"></script>-->
+
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="home" style="font-family: comic sans">HIPaaS</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">Link</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"-->
+<!--                   aria-expanded="false">Dropdown</a>-->
+<!--                <div class="dropdown-menu" aria-labelledby="dropdownId">-->
+<!--                    <a class="dropdown-item" href="#">Action 1</a>-->
+<!--                    <a class="dropdown-item" href="#">Action 2</a>-->
+<!--                </div>-->
+<!--            </li>-->
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="tutorSignup">
+<!--            <input class="form-control mr-sm-2" type="text" placeholder="Search">-->
+            <button class=" btn-outline-success my-2 my-sm-0">Teach on HIPaaS</button>
+        </form>
+            <div class="nav-item dropdown" style="padding-left:50px">
+                <a class="nav-link dropdown-toggle" id="drpid" data-toggle="dropdown" href="#">Login</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="login">Student</a>
+                    <a class="dropdown-item" href="trainer_login">Tutor</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="signup">Sign up</a>
+            </div>
+    </div>
+</nav>
+
+
+<div class="container" style="color:red; padding-top:20px; fonts-size:20px">
+{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+          {% for message in messages %}
+             {{ message }}<br>
+          {% endfor %}
+      {% endif %}
+{% endwith %}
+</div>
+
+
+
+{% block content %}{% endblock %}
+<!--<nav class="" style="position:fixed; left:0; bottom:0; width:100%; color:red; text-align:center; ">-->
+<!--    <hr>-->
+<!--    credits-->
+<!--</nav>-->
+
+<script>
+	$('#navId a').click(e => {
+		e.preventDefault();
+		$(this).tab('show');
+	});
+
+</script>
+</body>
+</html>
+

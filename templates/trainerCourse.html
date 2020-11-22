@@ -1,0 +1,89 @@
+{% extends 'layoutTrainer.html' %}
+{%block content%}
+
+<!--<div style="padding:20px">-->
+<!--    <h3></h3>-->
+<!--</div>-->
+<div class="container" style="padding-top: 20px">
+    <div class="row">
+        <!--        <div class="col-4" style="float:left">-->
+        <!--            <div class="embed-responsive embed-responsive-16by9">-->
+        <!--<iframe width="871" height="490" src="https://www.youtube.com/embed/LaFtAcIrGWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <div class="col-8" style="float:left">
+            <h3 class="card special-card" style="background-color: rgba(245, 245, 245, 0.05)">{{ session['course_name'] }}</h3>
+            <span class="card-block special-card"
+                  style="background-color: rgba(245, 245, 245, 0.05); font-size:25px"> <span>{{ crs[2] }}/5</span></span><br>
+            <u><span>{{ crs[3] }} enrolled</span></u>&nbsp&nbsp<u><span>total ratings: {{ crs[1] }}</span></u>
+<!--                <img src="static/feedback.png">-->
+<!--            <form method="POST" style="padding-top:20px">-->
+<!--                <button class="btn btn-danger" name="myCountry" onclick="myFunction()" type="submit" value="Enroll">-->
+<!--                    Enroll Course-->
+<!--                </button>-->
+<!--                <p id="demo"></p>-->
+<!--            </form>-->
+            ̥
+        </div>
+    </div>
+    <div class="row" style="padding-top:50px">
+        <h3>Course description</h3>
+        <div class="col-12 ">
+           {{crs[0]}}
+        </div>
+    </div>
+        <!--        <form style="padding-top:20px" method="POST">-->
+        <!--            <button class="btn btn-danger" type="submit" name="myCountry" value="10" onclick="myFunction1()">Complete Course</button>-->
+        <!--                <p id="demo"></p>-->
+        <!--        </form>-->
+    <h3 class="" style="padding-top:50px">Course analysis sentiments</h3>
+
+    <div class="row">
+<!--            <div class="col-" style="padding-top:50px">-->
+<!--                <img alt="" id="image" src="static/feedback.png" width="">-->
+
+                <img src="" alt="" id="image" width="">
+                <div class="col-3" style="float:left">
+                    <form method="POST" action="">
+                    <button class="btn btn-danger" name="img" value="val" id="img">click here to generate chart</button>
+<!--                        <img src="F:/xampp/htdocs/dashboard/feedback.png" alt="" id="image" width="">-->
+            </form></div>
+            <div class="col-3>" style="float:left" >
+<!--                <button class="btn btn-danger" value = '101' name="img" >click here to display chart</button></div>-->
+                <img id="change-image" src="http://127.0.0.1/dashboard/images/feedback.png" ></div>
+                <script>
+                jQuery(document).ready(function($){
+                    $('.btn btn-danger').on({
+                        'click': function(){
+                            $('#change-image').attr('src','http://127.0.0.1/dashboard/images/feedback.png');
+                            d = new Date();-->
+                              $("#change-image").attr("src", "http://127.0.0.1/dashboard/images/feedback.png?"+d.getTime());
+                        }
+                    });
+                });
+            </script>
+<!--            <div class="col-3>" style="float:left" >-->
+<!--                <form method="POST" action="">-->
+<!--                    <button class="btn btn-danger" value = '101' name="img" >click here to display chart</button></form></div>-->
+<!--&lt;!&ndash;                <img src="F:/xampp/htdocs/dashboard/feedback.png" alt="" id="image" width="">&ndash;&gt;-->
+<!--               <script>-->
+<!--                   $("#img").click(function(){-->
+<!--                  $(this).hide();-->
+<!--                  d = new Date();-->
+<!--                  $("#myimg").attr("src", "/feedback.png?"+d.getTime());-->
+<!--                  $(imageobj).attr('src', $(imageobj)-->
+<!--                             .attr('src') + '?' + Math.random() );-->
+<!--                  document.getElementById('image').src='{{url_for('static', filename='feedback.png')}}'-->
+<!--                  $(document).ready(function(){-->
+<!--	                $('img').attr('src', $('img').attr('src') + '?' + Math.random());-->
+
+<!--	});​-->
+
+<!--                });-->
+
+<!--               </script>-->
+
+        </div>
+
+    </div>
+{% endblock content %}

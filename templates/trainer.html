@@ -1,0 +1,118 @@
+
+
+{% extends 'layoutTrainer.html' %}
+{%block content%}
+
+<!--<div style="padding:20px">-->
+<!--    <h3></h3>-->
+<!--</div>-->
+<div class="container" style="padding-top: 20px">
+    <div class="row">
+        <!--        <div class="col-4" style="float:left">-->
+        <!--            <div class="embed-responsive embed-responsive-16by9">-->
+        <!--<iframe width="871" height="490" src="https://www.youtube.com/embed/LaFtAcIrGWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <div class="col-8" style="float:left">
+            <h3 class="" style="background-color: rgba(245, 245, 245, 0.05)"> {{ session['name'].title() }}</h3>
+            <span class="card-block special-card" style="background-color: rgba(245, 245, 245, 0.05); font-size:20px">Rating: <span>*****</span></span><br>
+            <!--            <u><span> enrolled</span></u>&nbsp&nbsp<u><span>total ratings: </span></u>-->
+
+            <!--            <form style="padding-top:20px" method="POST">-->
+            <!--            <button class="btn btn-danger" type="submit" name="myCountry" value="Enroll" onclick="myFunction()">Enroll Course</button>-->
+            <!--                <p id="demo"></p>-->
+            <!--            </form>-->
+
+        </div>
+    </div>
+<!--    <div class="row" style="padding-top:50px">-->
+<!--        <div class="col-12 card">̥-->
+<!--            jhgkj-->
+<!--        </div>-->
+        <!--        <form style="padding-top:20px" method="POST">-->
+        <!--            <button class="btn btn-danger" type="submit" name="myCountry" value="10" onclick="myFunction1()">Complete Course</button>-->
+        <!--                <p id="demo"></p>-->
+        <!--        </form>-->
+        <div class="row">
+            <div class="col-12" style="padding-top:50px">
+                <h3 class="" style="padding:10px">Courses published by you</h3>
+                <div class="row" style="display:inline">
+                    <form method="POST">
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Course ID</th>
+                                <th>Course name</th>
+                                <th>Check course details</th>
+                            </tr>
+                            {% for i in range(l) %}
+                            <tr>
+                                <td>{{ b[i] }}</td>
+                                <td>{{ val[i] }}</td>
+                                <td><button class="col-3 card  button " value="{{ val[i] }}" name="tc1" type="submit" >check</button></td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+<!--</div>-->
+                    <div class="row">
+                        <div class="col-12" style="padding-top:50px">
+                            <h2 class="" style="padding:10px">Trending technologies are - </h2>
+                              <h5 class="" style="padding:10px">{{ res[0] }} and {{ res[1] }} </h5>
+<!--                              <h5 class="" style="padding:10px">{{ res[1] }} </h5>-->
+                            <h3 class="" style="padding:10px">Here are the courses from which you can learn above technologies -</h3>
+                            <div class="row" style="display:inline">
+                                <form method="POST">
+                                    <a href="courses">
+                                        <button class="col-3 card  button " name="tc1" value="{{ data[0] }}" style="float:left; color:black; padding:20px 20px 20px 20px; height:100px">
+                                           {{ data[0] }}
+                                        </button>
+                                    </a>
+                                    <a href="courses">
+                                        <button class="col-3 card  button " name="tc1" value= "{{ data[1] }}"  style="float:left; color:black;padding:20px 20px 20px 20px; height:100px">
+                                            {{ data[1] }}
+                                        </button>
+                                    </a>
+                                    <a href="courses">
+                                        <button class="card col-3  button " name="tc1"  value= "{{ data[2] }}" style="float:left; color:black;padding:20px 20px 20px 20px; height:100px">
+                                            {{ data[2] }}
+                                        </button>
+                                    </a>
+                                    <a href="courses">
+                                        <button class="col-3 card  button " name="tc1"  value= "{{ data[5] }}" style="float:left; color:black;padding:20px 20px 20px 20px; height:100px">
+                                            {{ data[5] }}
+                                        </button>
+                                    </a></form>
+                            </div>
+
+                        </div>
+                    </div>
+
+            </div>
+
+
+            <script>
+function myFunction() {
+  var txt;
+  if (confirm("Congratulation! You have been enrolled to the course")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+function myFunction1() {
+  var txt;
+  if (confirm("Congratulation! You have completed the course")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+
+            </script>
+            {% endblock content %}

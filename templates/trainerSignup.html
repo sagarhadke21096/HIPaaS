@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<form method="POST" action="">
+<div class="container" style="padding-top: 50px">
+
+    <div class="card">
+    <div class="card-body">
+      <h4 class="card-title text-center" style="float:center">Tutor Sign up</h4>
+<!--      <p class="card-text">Some example text. Some example text.</p>-->
+<!--      <a href="#" class="card-link">Card link</a>-->
+<!--      <a href="#" class="card-link">Another link</a>-->
+<!--        <form action="login" method="POST">-->
+        <div class="form-group">
+            <label for="name"></label>Enter Name:
+            <input type="text" class="form-control" name="name" id="name" placeholder="">
+        </div>
+        <div class="form-check form-check-inline form-group">Gender: &nbsp&nbsp&nbsp
+            <label class="form-check-label" for="gender">Male
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="M">
+             </label>  &nbsp&nbsp
+            <label class="form-check-label" for="gen">Female
+                <input class="form-check-input" type="radio" name="gender" id="gen" value="F">
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="email"></label>Email:
+            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId" placeholder="">
+        </div>
+<!--        <div class="form-group">-->
+<!--            <label for="age"></label>Age:-->
+<!--            <input type="number" class="form-control" name="age" id="age" aria-describedby="emailHelpId" placeholder="">-->
+<!--        </div>-->
+        <div class="form-group">
+            <label for="qual"></label>Qualification
+            <select class="form-control" name="qualification" id="qual">
+                <option selected>---Select---</option>
+                <option value="BE">B.E.</option>
+                <option value="BSc">B.Sc</option>
+                <option value="BCA">BCA</option>
+                <option value="MBA">MBA</option>
+                <option value="MSc">M.Sc</option>
+                <option value="MCA">MCA</option>
+                <option value="MCA">PhD</option>
+                <option value="MCA">MS</option>
+            </select>
+        </div>
+        <div class="form-group">
+                <label for="rating"></label>Industry experience
+                <input aria-describedby="emailHelpId" class="form-control" id="rating" max="" min="0"
+                       name="ind_ex" placeholder="0.00" step="0.5" type="number">
+        </div>
+        <div class="form-group">
+                <label for="r"></label>Teaching experience
+                <input aria-describedby="emailHelpId" class="form-control" id="r    " max="" min="0"
+                       name="tech_ex" placeholder="0.00" step="0.5" type="number">
+        </div>
+         <div class="form-group">
+            <label for="aoi"></label>Domain knowledge
+            <select class="form-control" name="dom" id="aoi">
+                <option selected>---Select---</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Android">Android</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="password"></label>Enter password:
+            <input type="password" class="form-control" name="password" id="password" placeholder="">
+            <span style="font-size:11px; color:red">(password must be of 8 characters or more and contain atleast one uppercase, lowercase,
+            number and anyone of the special character '_' '$' '@')</span>
+        </div>
+        <div class="form-group">
+            <label for="password1"></label>Confirm password:
+            <input type="password" class="form-control" name="password1" id="password1" placeholder="">
+        </div>
+            <button type="submit" class="btn btn-primary" name="register">Submit</button>
+<!--    </form>-->
+         Already a tutor? <a href="trainer_login">Sign in</a>
+    </div>
+  </div>
+
+
+</div>
+</form>
+{% endblock content%}

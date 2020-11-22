@@ -1,0 +1,70 @@
+course_id,course_name,T1,T2,T3,course_overview,enrolled,rating_count,avg_rating
+1,Build Responsive Real World Websites with HTML5 and CSS,HTML,CSS,Web Development,"The easiest way to learn modern web design, HTML5 and CSS step-by-step from scratch. Design AND code a huge project.",3311.9,708.0725852,4
+2,"Advanced CSS: Flexbox, Grid, Animations and More!",CSS,,Web Development,"The most advanced and modern CSS course on the internet: master flexbox, CSS Grid, responsive design, and so much more.",1793.5,399.0475201,3.5
+3,Web Design for Beginners: Real World Coding in HTML & CSS,HTML,CSS,Web Development,"Launch a career as a web designer by learning HTML5, CSS, responsive design  and more!",772.4,198.8009863,4.5
+4,The Complete JavaScript Course 2020: Build Real Projects!,JavaScript,OOP,Web Development,"Master JavaScript with the most complete course! Projects, challenges ,JavaScript ES6+, OOP, Webpack.",6104.4,1405.153958,3
+5,JavaScript: Understanding the Weird Parts,JavaScript,,Web Development,"An advanced JavaScript course for everyone! Scope, closures, prototypes, 'this', build your own framework, and more.",10,1.36239782,3.5
+6,Modern JavaScript From The Beginning,JavaScript,OOP,Web Development,Learn and build projects with pure JavaScript (No frameworks or libraries),1497.4,451.557096,5
+7,Complete Python Bootcamp: Go from zero to hero in Python 3,Python,,Machine Learning,Learn Python like a Professional! Start from the basics and go all the way to creating your own applications and games!,22209.6,6020.288673,4
+8,Machine Learning A-Z™: Hands-On Python & R In Data Science,Python,R,Data Science,Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included.,917.7,170.5805615,5
+9,Python for Data Science and Machine Learning Bootcamp,Python,,Machine Learning,"Learn how to use NumPy, Pandas, Seaborn , Matplotlib , Plotly , Scikit-Learn , Machine Learning, Tensorflow , and more.",6092.8,1289.382052,4
+10,PHP for Beginners - Become a PHP Master,PHP,,Web Development,PHP for Beginners: learn everything you need to become a professional PHP developer with practical exercises & projects.,1467.2,286.5992784,3
+11,PHP with Laravel for beginners - Become a Master in Laravel,PHP,,Web Development,Learn to master Laravel to make advanced applications like the real CMS app we build on this course.,707,164.8959192,5
+12,PHP: Object Oriented Programming for beginners + Project,PHP,,Web Development,PHP : Learn PHP and Take your skills to another level. Make serious money by building awesome applications.,260,40.18069425,4
+13,Machine Learning A-Z,Python,R,Machine Learning,Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included.,167.7,27.2195993,5
+14,Data Science and Deep Learning with Python,Python,,Data Science,"Complete hands-on machine learning tutorial with data science, Tensorflow, artificial intelligence, and neural networks.",1829.2,292.7411363,3
+15,Spark and Python for Big Data with PySpark,Python,Spark,Data Science,"Learn how to use Spark with Python, including Spark Streaming, Machine Learning, Spark 2.0 DataFrames and more!",885.5,184.3707235,4.5
+16,Building Recommender Systems with Machine Learning and AI,Python,R,Machine Learning,"Help people discover new products and content with deep learning, neural networks, and machine learning recommendations.",97.1,12.80859938,3.5
+17,Natural Language Processing with Deep Learning in Python,Python,NLP,Data Science,"Complete guide on deriving and implementing word2vec, GloVe, word embeddings, and sentiment analysis with recursive nets.",441.9,63.55179809,5
+18,Master Computer Vision,Python,,Machine Learning,"Master OpenCV4 like a pro while learning Dlib, Deep Learning Computer Vision (Keras, TensorFlow & Caffe) + 21 Projects!",282.8,49.75478412,3.5
+19,SQL - MySQL for Data Analytics and Business Intelligence,SQL,,Data Science,"SQL that will get you hired – SQL for Business Analysis, Marketing, and Data Management.",1240.1,307.7049922,5
+20,R Programming A-Z™: R For Data Science With Real Exercises!,R,,Data Science,"Learn Programming In R And R Studio. Data Analytics, Data Science, Statistical Analysis, Packages, Functions, GGPlot2.",2581.2,571.2,4
+21,Statistics for Data Analysis Using R,R,,Data Science,"Learn Programming in R & R Studio, Descriptive, Inferential Statistics, Plots for Data Visualization, Data Science.",83.02,15.5,3
+22,Tableau 10 A-Z: Hands-On Tableau Training For Data Science!,Tableau,,Data Science,Learn Tableau 10 for Data Science step-by-step. Real-Life Data Analytics Exercises & Quizzes Included. Learn by doing!,146,40.9,4
+23,Deep Learning and NLP A-Z™: How to create a ChatBot,R,Python,Machine Learning,Learn the Theory and How to implement state of the art Deep Natural Language Processing models in Tensorflow and Python.,269.9,41.34,4.5
+24,The Python Mega Course: Build 10 Real World Applications,Python,,Machine Learning,A complete Python course for both beginners and intermediates! Master Python 3 by making 10 amazing Python apps.,3174.1,648.9,4
+25,Automate the Boring Stuff with Python Programming,Python,,Machine Learning,"A practical programming course for office workers, academics, and administrators who want to improve their productivity.",3889.7,430.8,3.5
+28,Java Programming Masterclass for Software Developers,Java,,Android,Learn Java In This Course And Become a Computer Programmer. Obtain valuable Core Java Skills And Java Certification.,9646.1,2286.7,5
+29,Selenium WebDriver with Java -Basics to Advanced+Frameworks,Java,,Android,"""TOP RATED (BEST SELLER) #1 Master SELENIUM java course"" -3 Million students learning worldWide with great collaboration.",492.4,60.6,5
+30,The Complete Android & Java Developer Course - Build 21 Apps,Java,Android Studio,Android,"Learn Android Development, Java & Android Studio from Scratch in 5 Weeks. Build a Diary App & more.",529.7,90,4.5
+31,The Complete Android N Developer Course,Java,Android Studio,Android,"Learn Android App Development with Android 7 Nougat by building real apps including Uber, Whatsapp and Instagram!",2384.4,434.3,4
+32,The Complete Android Oreo Developer Course - Build 23 Apps!,Java,Android Studio,Android,"Learn Android O App Development using Java & Kotlin - build real apps including Super Mario Run, Whatsapp and Instagram!",749.7,145.8,2
+33,Android Java Masterclass - Become an App Developer,Java,Android Studio,Android,Improve your career options by learning Android app Development. Master Android Studio and build your first app today.,722.3,109.9,3.5
+34,The Complete Android & Java Developer Course - Build 21 Apps,Java,Android Studio,Android,"Learn Android Development, Java & Android Studio from Scratch in 5 Weeks. Build a Diary App & more.",529.7,90,2.5
+35,The Complete React Native + Hooks Course [2019 Edition],ReactNative,,Android,"Understand React Native with Hooks, Context, and React Navigation.",2906.6,777,5
+36,React Native - The Practical Guide 2020,JavaScript,ReactNative,Android,Use React Native and your React knowledge and take your web development skills to build native iOS and Android Apps.,1084.9,182.8,4
+37,Using Python to Access Web Data,HTML,Python,Data Science,"This course will show how one can treat the Internet as a source of data. We will scrape, parse, and read web data as well as access data using web APIs.",2381.3,223.7,5
+38,Applied Text Mining in Python,Python,,Machine Learning,This course will introduce the learner to text mining and text manipulation basics.,228.8,7.8,5
+39,Mathematics for Machine Learning Specialization,Python,,Machine Learning,Learn about the prerequisite mathematics for applications in data science and machine learning.,469.5,20.5,5
+40,Data Structures,C++,Java,Android,You will learn how these data structures are implemented in different programming languages and will practice implementing them in our programming assignments.,247.05,5.93,5
+41,Object Oriented Programming in Java Specialization,Java,,Android,This Specialization is for aspiring software developers with some programming experience in at least one other programming language to be able to solve more complex problems through objected-oriented design with Java.,381.9,8.5,4
+42,Neural Networks and Deep Learning,Python,,Data Science,Deep learning is also a new "superpower" that will let you build AI systems that just weren't possible a few years ago.,2046.6,29.59,4.5
+43,IBM Data Science Professional Certification,Python,,Data Science,"Kickstart your Career in Data Science & ML. Master data science, learn Python & SQL, analyze & visualize data, build machine learning models.",1920.5,26.36,5
+44,Applied Machine Learning in Python,Python,,Machine Learning,"This course will introduce the learner to applied machine learning, focusing more on the techniques and methods than on the statistics behind these methods.",28875.3,1295.07,4
+45,Applied Data Science with Python Specialization,Python,,Data Science,"Gain new insights into your data . Learn to apply data science methods and techniques, and acquire analysis skills.",1648.5,10.99,3
+46,Python for Everybody Specialization,Python,,Machine Learning,"Learn to Program and Analyze Data with Python. Develop programs to gather, clean, analyze, and visualize data.",11641.4,570.14,5
+49,Clinical Natural Language Processing,Python,,Data Science,"This course teaches you the fundamentals of clinical natural language processing (NLP). In this course you will learn the basic linguistic principals underlying NLP, as well as how to write regular expressions and handle text data in R.",2250.5,66.92,5
+50,Creating Dashboards and Storytelling with Tableau,Tableau,,Data Science,"Throughout the course you will apply more advanced functions within Tableau, such as hierarchies, actions and parameters to guide user interactions.",4945.6,171.14,4.5
+51,Running a Mobile App Dev Business: The Complete Guide,Java,XML,Android,Learn how to start and grow a mobile app development business. Get up & running in less than 1 week.,53022.8,2061.43,3.5
+52,Android App Development: Mobile App Development & Java,Java,,Android,You'll create a real world social networking application! All of Android's core concepts in a production level project!,20262.5,353.72,5
+53,Android App Development Specialization,Java,,Android,Launch Your Android App Development Career. Master the knowledge and skills necessary to develop maintainable mobile computing apps.,3966.5,81.79,4
+54,"CSS - The Complete Guide 2020 (incl. Flexbox, Grid & Sass)",CSS,,Web Development,Learn CSS for the first time or brush up your CSS skills and dive in even deeper. Every web developer has to know CSS.,579,108.11,5
+55,Modern HTML & CSS From The Beginning (Including Sass),HTML,CSS,Web Development,"Build modern responsive websites & UIs with HTML5, CSS!",793.1,205,5
+56,Build Websites from Scratch with HTML,HTML,,Web Development,Learn Web Development Essentials and Become a Web Developer From Scratch in this Complete HTML  Beginner's Course.,457,35,4
+57,The Modern JavaScript Bootcamp,JavaScript,,Web Development,"Learn JavaScript by building real-world apps. Includes 3 real-world projects, 80 programming challenges, and ES6/ES7!",756.3,184.7,4
+58,Javascript: The Complete Developer's Guide,JavaScript,,Web Development,ES6 Javascript Development from scratch. Get practice with live examples and learn exactly where to apply ES6 features.,884.8,224.97,5
+59,JavaScript - The Complete Guide 2020 (Beginner + Advanced),JavaScript,,Web Development,Modern JavaScript from the beginning - all the way up to JS expert level! THE must-have JavaScript resource in 2020.,301.4,39.53,4
+60,Learning Python for Data Analysis and Visualization,Python,,Machine Learning,"Learn python and how to use it to analyze,visualize and present data. Includes tons of sample code and hours of video!",1260,113.7,5
+61,Learn Python Programming Masterclass,Python,,Machine Learning,This Python For Beginners Course Teaches You The Python Language Fast. Includes Python Online Training With Python 3.,3284.1,710.9,4
+62,Learn PHP Programming From Scratch,PHP,,Web Development,Learn  PHP programming completely.,89,2.6,3
+63,Build a Social Network from Scratch: JavaScript PHP + MySQL,JavaScript,PHP,Web Development,"Learn JavaScript, PHP and MySQL by building the ultimate social network website from scratch! The complete guide!",185.4,39.29,5
+64,XML and XML Schema Definition in Easy Steps,XML,,Android,"Learn,Design and Practice XML and XML Schema creation from scratch in simple steps.",20262.5,353.72,4
+65,The Complete React Developer Course,ReactNative,,Web Development,"Learn React completely.This course was updated to support React v16, React Hooks, the Context API.",3966.5,81.79,3.5
+66,Build Websites from Scratch with CSS,CSS,,Web Development,Learn Web Development Essentials and Become a Web Developer From Scratch in this Complete CSS Beginner's Course.,579,108.11,2
+67,Introduction to Javascript,JavaScript,,Web Development,"An advanced JavaScript course for everyone! Scope, closures, prototypes, 'this', build your own framework, and more.",793.1,205,5
+68,Accelerated JavaScript Training,JavaScript,,Web Development,"Take a dive into JavaScript, a Must-Know Language in Web Development, with a Hands-on, Example-driven Approach.",457,35,5
+69,Step-by-step HTML for Absolute Beginners,HTML,,Web Development,Learn how to code HTML5 to create your own website in this beginner-level course.,756.3,184.7,5
+70,Complete CSS Course: Beginning to Advanced,CSS,,Web Development,Learn CSS from Scratch using step by step process.,884.8,224.97,5
+71,Create Websites with HTML & CSS for Beginners,HTML5,CSS,Web Development,Learn Web Development by Building Websites with HTML5 and CSS from Scratch!,301.4,39.53,4
+72,The Complete SQL Bootcamp,SQL,,Android,Become an expert at SQL!,1260,113.7,4
+73,Learn XML Crash Course: Discover Essential XML Fundamentals,XML,,Android,Jump into the world of XML with this fast and immersive course.,3284.1,710.9,5

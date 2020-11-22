@@ -1,0 +1,80 @@
+{% extends "layoutInner.html" %}
+{% block content %}
+<div class="container" style="padding-top:50px" xmlns="http://www.w3.org/1999/html">
+    <h3>User details:</h3> {% if error %}
+        <span style="color:red; font-weight:bold">Error: {{ error }} </span>
+    {% endif %}
+
+
+        <form action="edit" method="POST" style="padding-top: 20px">
+        <div class="form-group">
+            <label for="name"></label>Enter Name:
+            <input type="text" class="form-control" name="name" id="name" value="{{ session['name'] }}">
+        </div>
+        <div class="form-check form-check-inline form-group">Gender: &nbsp&nbsp&nbsp
+            <label class="form-check-label" for="gender">Male
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="M">
+             </label>  &nbsp&nbsp
+            <label class="form-check-label" for="gen">Female
+                <input class="form-check-input" type="radio" name="gender" id="gen" value="F">
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="email"></label>Email:
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelpId" value="{{ session['email'] }}" disabled>
+        </div>
+        <div class="form-group">
+            <label for="age"></label>Age:
+            <input type="number" class="form-control" name="age" id="age" aria-describedby="emailHelpId" value="{{ session['age'] }}">
+        </div>
+        <div class="form-group">
+            <label for="qual"></label>Qualification
+            <select class="form-control" name="qualification" id="qual">
+                <option selected>---select---</option>
+                <option value="BE">B.E.</option>
+                <option value="BSc">B.Sc</option>
+                <option value="BCA">BCA</option>
+                <option value="MBA">MBA</option>
+                <option value="MSc">M.Sc</option>
+                <option value="MCA">MCA</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="prevk"></label>Previous knowledge
+            <select class="form-control"  id="prevk" name="prev_kno" >
+                <option selected>---Select---</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="Javascript">Javascript</option>
+<!--                <option value="Java">Java</option>-->
+                <option value="CSS">CSS</option>
+                <option value="HTML">HTML</option>
+            </select>
+        </div>
+         <div class="form-group">Area of interest
+            <label for="aoi"></label>
+            <select class="form-control"  id="aoi" name="interest">
+                <option selected>---Select---</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Android">Android</option>
+            </select>
+        </div>
+<!--        <div class="form-group">-->
+<!--            <label for="password"></label>Enter password:-->
+<!--            <input type="password" class="form-control" name="password" id="password" placeholder="">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="password1"></label>Confirm password:-->
+<!--            <input type="password" class="form-control" name="password1" id="password1" placeholder="">-->
+<!--        </div>-->
+            <button type="submit" class="btn btn-primary" name="edit1" value="sub">Submit</button>
+
+    </form>
+
+
+
+
+</div>
+{%  endblock content %}
